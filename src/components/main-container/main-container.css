@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Major+Mono+Display&display=swap");
+
+@font-face {
+  font-family: 'MaisonNeue';
+  src: url('../../fonts/MaisonNeueTRIAL-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  font-family: "MaisonNeue", monospace;
+  margin: 0;
+  width: auto;
+  text-align: center;
+  display: block;
+  letter-spacing: 25px;
+  margin-left: 1.5rem;
+}
+
+.subtitle {
+  font-family: "Inconsolata", monospace;
+  margin: 0.1;
+  width: auto;
+  display: block;
+}
+
+.external-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 35%;
+}
+
+.main-info {
+  margin: 0 0.1rem;
+  transform: scale(1.2);
+}
