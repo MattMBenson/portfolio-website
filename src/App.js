@@ -11,10 +11,16 @@ function App() {
   };
   return (
     <div>
-      <div className={`App-light ${isLight ? "App-light" : "App-dark"}`}>
-        <div className="canvas-container">
-          <CanvasBackground isLight={isLight} />
-        </div>
+      <div className={`${isLight ? "navBar-light" : "navBar-dark"}`}>
+        <a className="navHeading" href="#">
+          WORK
+        </a>
+        <a className="navHeading" href="#">
+          CONTACT
+        </a>
+      </div>
+      <div className={`${isLight ? "App-light" : "App-dark"}`}>
+        <CanvasBackground isLight={isLight} />
         <MainContainer isLight={isLight} toggleTheme={toggleTheme} />
       </div>
     </div>
