@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.77bd6597.css",
+    "main.js": "/static/js/main.b594eab8.js",
+    "static/media/MaisonNeueTRIAL-Thin.otf": "/static/media/MaisonNeueTRIAL-Thin.e632709c3f87a4644395.otf",
+    "index.html": "/index.html",
+    "main.77bd6597.css.map": "/static/css/main.77bd6597.css.map",
+    "main.b594eab8.js.map": "/static/js/main.b594eab8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.77bd6597.css",
+    "static/js/main.b594eab8.js"
+  ]
+}

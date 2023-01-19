@@ -11,10 +11,10 @@ function CanvasBackground({ isLight }) {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     let connectRadius = 125;
-    let nodeLineColour = isLight ? "rgb(227, 227, 227)" : "rgb(54, 53, 53)";
-    let defaultNodeColour = isLight ? "rgb(227, 227, 227)" : "rgb(54, 53, 53)";
-    let userLineColour = isLight ? "rgb(173, 172, 172)" : "rgb(110, 107, 107)";
-    let rareNodeColour = isLight ? "rgb(242, 63, 63)" : "rgb(227, 146, 48)";
+    let nodeLineColour = isLight ? "rgb(245, 245, 245)" : "rgb(42,42,42)";
+    let defaultNodeColour = isLight ? "rgb(232, 232, 232)" : "rgb(55, 55, 55)";
+    let userLineColour = isLight ? "rgb(250, 200, 190)" : "rgb(97, 97, 97)";
+    let rareNodeColour = isLight ? "rgb(250, 200, 190)" : "rgb(97, 97, 97)";
 
     let originalCanvasWidth = canvas.width;
     let originalCanvasHeight = canvas.height;

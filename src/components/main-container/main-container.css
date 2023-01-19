@@ -13,12 +13,11 @@
   width: auto;
   text-align: center;
   display: block;
-  letter-spacing: 25px;
-  margin-left: 1.5rem;
+  letter-spacing: 0.5rem;
 }
 
 .subtitle {
-  font-family: "Inconsolata", monospace;
+  font-family: "MaisonNeue", monospace;
   margin: 0.1;
   width: auto;
   display: block;
@@ -28,7 +27,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   position: relative;
   z-index: 2;
 }
@@ -38,9 +36,4 @@
   justify-content: center;
   position: absolute;
   top: 35%;
-}
-
-.main-info {
-  margin: 0 0.1rem;
-  transform: scale(1.2);
 }

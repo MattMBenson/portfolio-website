@@ -5,14 +5,12 @@ import "./main-container.css";
 const MainContainer = ({ isLight, toggleTheme }) => {
   return (
     <div className="main-container">
-      <div className="main-info">
+      <div className="wrap">
         <h1 className="title">MATTHEW BENSON</h1>
         <p className="subtitle">
-          {" "}
-          Software Developer & WEB3.0 Enthusiast
+          Software Developer & Web3 Enthusiast
         </p>
         <div className="external-buttons">
-          <ThemeButton onClick={toggleTheme} isLight={isLight} />
           <div
             className="button"
             id={isLight ? "github-dark" : "github-light"}
@@ -33,6 +31,7 @@ const MainContainer = ({ isLight, toggleTheme }) => {
             id={isLight ? "resume-dark" : "resume-light"}
             onClick={() => window.open("https://drive.google.com/file/d/1WVK5eF3nseDBj1jLfQEi7IKXLiKW6p1d/view?usp=sharing")}
           ></div>
+          <ThemeButton onClick={toggleTheme} isLight={isLight} />
         </div>
       </div>
     </div>

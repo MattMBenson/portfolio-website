@@ -12,10 +12,10 @@ function App() {
   return (
     <div>
       <div className={`${isLight ? "navBar-light" : "navBar-dark"}`}>
-        <a className="navHeading" href="#">
+        <a className="navHeading" href="#root">
           WORK
         </a>
-        <a className="navHeading" href="#">
+        <a className="navHeading" href="#root">
           CONTACT
         </a>
       </div>
