@@ -4,6 +4,7 @@ import MainContainer from "./components/main-container/main-container.js";
 import CanvasBackground from "./components/svgcanvas/matrix.js";
 import Buttons from "./components/external-buttons/Buttons";
 import ThemeButton from "./components/toggleTheme/ThemeButton";
+import { Link } from "react-router-dom";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
@@ -17,11 +18,11 @@ function App() {
         <div className="navButton">
           <ThemeButton onClick={toggleTheme} isLight={isLight} />
         </div>
-        <a className="navHeading" href="#root">
+        <Link className="navHeading" to="/WORK">
           Work,
-        </a>
+        </Link>
         <a className="navHeading" href="#root">
-          Contact
+          Connect
         </a>
       </div>
       <div className={`${isLight ? "App-light" : "App-dark"}`}>
