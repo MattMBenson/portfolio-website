@@ -17,8 +17,10 @@
   font-size: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   z-index: 3;
   transition: background-color 0.9s;
+  margin-right: 2rem;
 }
 
 .navBar-light {
@@ -32,10 +34,19 @@
 }
 
 .navHeading {
-  margin: 0 2rem;
+  margin-right: 0.2rem;
   text-decoration: none;
   color: inherit;
 }
+
+.navButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1rem;
+  margin-top: 0.2rem;
+}
+
 
 .App-light {
   position: fixed;
@@ -79,7 +90,7 @@
   height: 1.5rem;
   border-radius: 50%;
   top: 0;
-  right: 0;
+  left: 0;
 }
 
 #dark-mode {
@@ -96,10 +107,9 @@
 
 .button,
 .theme-button {
-  transform: scale(1);
   transition: transform 0.2s;
   cursor: pointer;
-  margin: 0 1rem;
+  margin: 0.5rem 0;
   z-index: 2;
 }
 
@@ -140,18 +150,11 @@
   height: 32px;
 }
 
-#resume-dark {
-  background-image: url("../sprites/pdf_black.png");
+#twitter-dark {
+  background-image: url("../sprites/twitter_black.png");
   background-size: 100% 100%;
   width: 40px;
   height: 40px;
-}
-
-#instagram-dark {
-  background-image: url("../sprites/instagram_black.png");
-  background-size: 100% 100%;
-  width: 32px;
-  height: 32px;
 }
 
 #github-light {
@@ -168,16 +171,10 @@
   height: 32px;
 }
 
-#resume-light {
-  background-image: url("../sprites/pdf_white.png");
+#twitter-light {
+  background-image: url("../sprites/twitter_white.png");
   background-size: 100% 100%;
   width: 40px;
   height: 40px;
 }
 
-#instagram-light {
-  background-image: url("../sprites/instagram_white.png");
-  background-size: 100% 100%;
-  width: 32px;
-  height: 32px;
-}

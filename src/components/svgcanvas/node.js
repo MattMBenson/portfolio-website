@@ -9,7 +9,10 @@ export class Node {
     this.canvas = canvas;
   }
 
-  isWithinRadius(x, y, radius) {
+  isWithinRadius(x, y, radius, type=Boolean(false)) {
+    if (type) {
+      radius = radius / 1.5;
+    }
     let distance = Math.sqrt(Math.pow(this.x - x, 2) + Math.pow(this.y - y, 2));
     return distance <= radius;
   }

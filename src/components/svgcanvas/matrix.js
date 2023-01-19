@@ -62,7 +62,7 @@ function CanvasBackground({ isLight }) {
         ctx.fillStyle = node.colour;
         ctx.fill();
 
-        if (node.isWithinRadius(x, y, connectRadius)) {
+        if (node.isWithinRadius(x, y, connectRadius, true)) {
           ctx.beginPath();
           ctx.moveTo(node.x, node.y);
           ctx.lineTo(x, y);

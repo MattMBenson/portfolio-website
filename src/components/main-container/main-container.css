@@ -22,18 +22,11 @@
   width: auto;
   display: block;
 }
-
-.external-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
 .main-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 35%;
+  z-index: 4;
 }

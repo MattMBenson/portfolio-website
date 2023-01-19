@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./styles/light-theme.css";
 import MainContainer from "./components/main-container/main-container.js";
 import CanvasBackground from "./components/svgcanvas/matrix.js";
+import Buttons from "./components/external-buttons/Buttons";
+import ThemeButton from "./components/toggleTheme/ThemeButton";
 
 function App() {
   const [isLight, setIsLight] = useState(true);
@@ -12,16 +14,21 @@ function App() {
   return (
     <div>
       <div className={`${isLight ? "navBar-light" : "navBar-dark"}`}>
+        <div className="navButton">
+          <ThemeButton onClick={toggleTheme} isLight={isLight} />
+        </div>
         <a className="navHeading" href="#root">
-          WORK
+          Work,
         </a>
         <a className="navHeading" href="#root">
-          CONTACT
+          Contact
         </a>
       </div>
       <div className={`${isLight ? "App-light" : "App-dark"}`}>
         <CanvasBackground isLight={isLight} />
-        <MainContainer isLight={isLight} toggleTheme={toggleTheme} />
+        <MainContainer />
+        <Buttons isLight={isLight} />
+        <div className="blur"></div>
       </div>
     </div>
   );
