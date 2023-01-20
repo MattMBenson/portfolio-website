@@ -41,10 +41,10 @@ export default function Connect() {
           </div>
         </div>
       </div>
-      <div svg-matthew>
+      <div className="svg-matthew">
         <SvgMatthew />
       </div>
-      <div svg-benson>
+      <div className="svg-benson">
         <SvgBenson />
       </div>
     </div>
