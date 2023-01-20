@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "MaisonNeueRegular";
+  src: url("../fonts/MaisonNeueTRIAL-VAR[BETA].ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    overflow: hidden;
+}
+
+.emailInput {
+  outline: none;
+  border: none;
+  font-family: "MaisonNeueRegular";
+  width: 15vw;
+}
+.submitInput {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.flex-wrap {
+  display: flex;
+}
+
+.info{
+    margin-bottom:1rem;
+}
+
+.connect {
+  border-bottom: 1px solid #000;
+  justify-content: left;
+  align-items: center;
+  display: inline-block;
+}
+
+.submitInput {
+  padding: 0;
+  margin: 0;
+}
+
+.submitInput:hover {
+  cursor: pointer;
+}
+
+.info-container {
+  font-family: "MaisonNeueRegular";
+  font-size: 1.1rem;
+  color: #000;
+  width: 30vw;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: left;
+  letter-spacing: 0px;
+  top: 30%;
+  right: 10%;
+  position: absolute;
+}
+
+.firstName {
+    position: absolute;
+    top: -20%;
+    transform: scaleY(1);
+}
+.lastName {
+    position: absolute;
+    bottom: -10%;
+}
+
+@media(max-width: 768px) {
+  .info-container {
+    width: 100%;
+  }
+}

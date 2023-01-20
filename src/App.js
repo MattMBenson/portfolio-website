@@ -19,10 +19,10 @@ function App() {
           <ThemeButton onClick={toggleTheme} isLight={isLight} />
         </div>
         <Link className="navHeading" to="/WORK">
-          Work,
+          WORK,
         </Link>
-        <a className="navHeading" href="#root">
-          Connect
+        <a className="navHeading" href="/CONNECT">
+          CONNECT
         </a>
       </div>
       <div className={`${isLight ? "App-light" : "App-dark"}`}>
