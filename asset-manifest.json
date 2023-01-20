@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MattMBenson/portfolio-website/static/css/main.60716915.css",
+    "main.js": "/MattMBenson/portfolio-website/static/js/main.cf86ef6b.js",
+    "static/media/MaisonNeueTRIAL-VAR[BETA].ttf": "/MattMBenson/portfolio-website/static/media/MaisonNeueTRIAL-VAR[BETA].a0968ba9182073438e11.ttf",
+    "static/media/MaisonNeueTRIAL-Thin.otf": "/MattMBenson/portfolio-website/static/media/MaisonNeueTRIAL-Thin.e632709c3f87a4644395.otf",
+    "index.html": "/MattMBenson/portfolio-website/index.html",
+    "main.60716915.css.map": "/MattMBenson/portfolio-website/static/css/main.60716915.css.map",
+    "main.cf86ef6b.js.map": "/MattMBenson/portfolio-website/static/js/main.cf86ef6b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60716915.css",
+    "static/js/main.cf86ef6b.js"
+  ]
+}
