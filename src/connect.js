@@ -5,15 +5,32 @@ import SvgMatthew from "./svg-components/svg-matthew.js";
 import SvgMatthewCopy from "./svg-components/svg-matthew-copy.js";
 import SvgBenson from "./svg-components/svg-benson.js";
 import { Link } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 export default function Connect() {
   const [isActive, setIsActive] = useState(false);
-  const [email, setEmail] = useState("");
   const rootRef = useRef(null);
+  const form = useRef();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setEmail("");
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_j86lp4a",
+        "template_3mp56f5",
+        form.current,
+        "We2xEWSAWsTIVa-hF"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   useEffect(() => {
@@ -40,14 +57,13 @@ export default function Connect() {
               projects, resulting in effective and high-performing software.
               Let's work.
             </div>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className="connect">
                 <input
                   className="emailInput"
                   type="text"
                   placeholder="Your email."
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
+                  name="from_email"
                 />
                 <button className="submitInput" type="submit">
                   Go
