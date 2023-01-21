@@ -1,4 +1,5 @@
 {
+  "homepage": "http://MattMBenson.github.io/portfolio-website",
   "name": "portfolio-app",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@tweenjs/tween.js": "^18.6.4",
-    "gh-pages": "^4.0.0",
     "nodemailer": "^6.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "source-map-loader": "^4.0.1"
   }
 }
