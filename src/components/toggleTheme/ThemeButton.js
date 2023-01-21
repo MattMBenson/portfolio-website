@@ -12,7 +12,7 @@ const ThemeButton = ({ isLight, onClick }) => {
           id={isLight ? "dark-mode" : "light-mode"}
           onClick={onClick}
         ></input>
-        <span class="check"></span>
+        <span className="check"></span>
       </label>
     </div>
   );
