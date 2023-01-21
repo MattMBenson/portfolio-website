@@ -58,8 +58,8 @@ export default function Connect() {
         </div>
         <div className="matthewContainer">
           <Link to="/">
-            <SvgMatthew className="svg-matthew" />
-            <SvgMatthewCopy className="svg-matthewflipped" />
+            <SvgMatthew />
+            <SvgMatthewCopy />
           </Link>
         </div>
         <div>
