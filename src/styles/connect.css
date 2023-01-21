@@ -6,7 +6,26 @@
 }
 
 body {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+.dark-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50vw;
+  z-index: -1;
+  background-color: #000;
+}
+.light-side {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100vh;
+  width: 50vw;
+  z-index: -1;
+  background-color: #fff;
 }
 
 .emailInput {
@@ -14,6 +33,11 @@ body {
   border: none;
   font-family: "MaisonNeueRegular";
   width: 15vw;
+}
+
+.emailInput.faded {
+  opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 .submitInput {
   outline: none;
@@ -25,8 +49,8 @@ body {
   display: flex;
 }
 
-.info{
-    margin-bottom:1rem;
+.info {
+  margin-bottom: 1rem;
 }
 
 .connect {
@@ -54,23 +78,94 @@ body {
   flex-direction: column;
   justify-content: left;
   letter-spacing: 0px;
-  top: 30%;
+  top: 20%;
   right: 10%;
   position: absolute;
 }
 
-.firstName {
-    position: absolute;
-    top: -20%;
-    transform: scaleY(1);
-}
-.lastName {
-    position: absolute;
-    bottom: -10%;
+.matthewContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50vw;
+  transform: scale(30%);
+  top: 0;
+  left: 0;
 }
 
-@media(max-width: 768px) {
+.matthewContainer > * {
+  display: block;
+}
+
+.firstName {
+  top: 0;
+  left: 0;
+  width: 50vw;
+  margin-bottom: 0.1rem;
+}
+
+.firstName-flipped {
+  top: 20%;
+  left: 0;
+  transform: rotate(180deg);
+  transform: scaleY(-100%);
+  width: 50vw;
+}
+
+.lastName {
+  position: absolute;
+  bottom: 1%;
+  left: 15%;
+  animation: moveIn-bottom 2s ease-in-out;
+  animation-fill-mode: forwards;
+  width: 80vw;
+  min-height: 40vh;
+  transform: scale(125%);
+}
+
+@media screen and (max-width: 600px) {
   .info-container {
-    width: 100%;
+    right: 30%;
+    width: 60vw;
+  }
+  .dark-side {
+    display: none;
+    visibility: hidden;
+  }
+  .light-side {
+    height: 100vh;
+    width: 100vw;
+  }
+  .letter {
+    fill: black;
+    stroke: black;
+  }
+}
+
+@keyframes moveIn-fromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveIn-top {
+  from {
+    top: -1000%;
+  }
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes moveIn-bottom {
+  from {
+    left: 200%;
+  }
+  to {
+    left: 14.3%;
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
 
-const SvgMatthew = () => {
+const SvgMatthewCopy = () => {
   return (
     <svg
-      className="firstName"
+      className="firstName-flipped"
       viewBox="0 0 446 70"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="none"
@@ -13,9 +13,9 @@ const SvgMatthew = () => {
         strokeLinecap="round"
         fillRule="evenodd"
         fontSize="9pt"
-        stroke="#fff"
+        stroke="#bdbdbd"
         strokeWidth="0.25mm"
-        fill="#fff"
+        fill="#bdbdbd"
       >
         <path
           className="letter"
@@ -57,4 +57,4 @@ const SvgMatthew = () => {
   );
 };
 
-export default SvgMatthew;
+export default SvgMatthewCopy;

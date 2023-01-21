@@ -48,7 +48,6 @@
   margin-top: 0.2rem;
 }
 
-
 .App-light {
   position: fixed;
   top: 0;
@@ -179,3 +178,60 @@
   height: 40px;
 }
 
+input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background-image: rgb(46, 46, 46);
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+  box-shadow: 0px 0px 1px 1px rgb(121, 121, 121) inset;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background-image: rgb(46, 46, 46);
+}
+
+input[type="checkbox"]:checked ~ .check:before {
+  background-image: rgb(46, 46, 46);
+  transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after {
+  background-image: linear-gradient(to bottom right, #c9ba40, #c96908);
+  filter: drop-shadow(0 0 0.75rem #f57f7f);
+  transform: translateX(0px);
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: rgb(46, 46, 46);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-image: linear-gradient(to bottom right, #c9ba40, #c96908);
+  filter: drop-shadow(0 0 0.75rem #f57f7f);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}

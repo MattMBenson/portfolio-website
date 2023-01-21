@@ -2,11 +2,19 @@ import React, { useState, useRef, useEffect } from "react";
 import "./styles/fade.css";
 import "./styles/connect.css";
 import SvgMatthew from "./svg-components/svg-matthew.js";
+import SvgMatthewCopy from "./svg-components/svg-matthew-copy.js";
 import SvgBenson from "./svg-components/svg-benson.js";
+import { Link } from "react-router-dom";
 
 export default function Connect() {
   const [isActive, setIsActive] = useState(false);
+  const [email, setEmail] = useState("");
   const rootRef = useRef(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEmail("");
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,37 +23,48 @@ export default function Connect() {
   }, []);
 
   return (
-    <div
-      ref={rootRef}
-      className={`fade-in ${isActive ? "fade-in-active" : ""}`}
-    >
-      <div className="flex-wrap">
-        <div className="info-container">
-          <div className="info">
-            As a computer science student and a software developer, I work with
-            cutting-edge technologies in the field of AI and machine learning.
-            My passion in these areas have driven me to delve deeper into the
-            subject and understand how to apply these technologies to real-world
-            applications. Additionally, my interest in web3 elements keeps me at
-            the forefront of technology.
-          </div>
-          <div className="connect">
-            <input
-              className="emailInput"
-              type="email"
-              placeholder="Your email."
-            />
-            <button className="submitInput" type="submit">
-              Go
-            </button>
+    <div className="connect-container">
+      <div className="dark-side"></div>
+      <div className="light-side"></div>
+      <div
+        ref={rootRef}
+        className={`fade-in ${isActive ? "fade-in-active" : ""}`}
+      >
+        <div className="flex-wrap">
+          <div className="info-container">
+            <div className="info">
+              As a software engineer, I specialize in extracting the most
+              important information and giving it form through clean and
+              efficient code. My skills in problem-solving and attention to
+              detail help me to bring order and clarity to even the most complex
+              projects, resulting in effective and high-performing software.
+              Let's work.
+            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="connect">
+                <input
+                  className="emailInput"
+                  type="text"
+                  placeholder="Your email."
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+                <button className="submitInput" type="submit">
+                  Go
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-      <div className="svg-matthew">
-        <SvgMatthew />
-      </div>
-      <div className="svg-benson">
-        <SvgBenson />
+        <div className="matthewContainer">
+          <Link to="/">
+            <SvgMatthew className="svg-matthew" />
+            <SvgMatthewCopy className="svg-matthewflipped" />
+          </Link>
+        </div>
+        <div>
+          <SvgBenson className="svg-benson" />
+        </div>
       </div>
     </div>
   );
