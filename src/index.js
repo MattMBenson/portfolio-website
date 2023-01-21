@@ -4,7 +4,7 @@ import App from "./App";
 import Work from "./work";
 import Connect from "./connect";
 import "./styles/fade.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

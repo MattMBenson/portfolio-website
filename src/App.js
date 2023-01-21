@@ -21,9 +21,9 @@ function App() {
         <Link className="navHeading" to="/WORK">
           WORK,
         </Link>
-        <a className="navHeading" href="/CONNECT">
+        <Link className="navHeading" to="/CONNECT">
           CONNECT
-        </a>
+        </Link>
       </div>
       <div className={`${isLight ? "App-light" : "App-dark"}`}>
         <CanvasBackground isLight={isLight} />
