@@ -28,18 +28,19 @@
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   z-index: 5;
 }
 
-.data-cursor-tracker {
+.data-cursor-tracker-x {
   position: absolute;
   top: 55%;
   left: 50%;
-  width: 60vw;
-  height: 75vh;
+  width: 70vw;
+  height: 50vh;
   transform: translate(-50%, -50%);
   z-index: 0;
+  cursor: none;
 }
 
 .work-container:hover {
@@ -48,10 +49,12 @@
 
 .cursor-wrapper {
   font-family: "MaisonNeueTHIN";
-  font-size: 14px;
+  font-size: 30px;
   visibility: hidden;
   position: absolute;
-  color: red;
   z-index: 100;
-  cursor: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  opacity: 0%;
 }
