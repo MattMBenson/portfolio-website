@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "MaisonNeueTHIN";
+  src: url("../fonts/MaisonNeueTRIAL-Thin.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.light-side {
+  width: 50vw;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.dark-side {
+  position: absolute;
+  width: 50vw;
+  height: 100%;
+  background-color: #000;
+  z-index: -1;
+}
+
+.work-container {
+  position: absolute;
+  width: 25vw;
+  height: 50vh;
+  background-image: url("https://picsum.photos/384/488");
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.data-cursor-tracker {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 60vw;
+  height: 75vh;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.work-container:hover {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+.cursor-wrapper {
+  font-family: "MaisonNeueTHIN";
+  font-size: 14px;
+  visibility: hidden;
+  position: absolute;
+  color: red;
+  z-index: 100;
+  cursor: none;
+}

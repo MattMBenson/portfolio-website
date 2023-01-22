@@ -1,11 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./styles/fade.css";
 import "./styles/connect.css";
-import SvgMatthew from "./svg-components/svg-matthew.js";
-import SvgMatthewCopy from "./svg-components/svg-matthew-copy.js";
 import SvgBenson from "./svg-components/svg-benson.js";
-import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import Logo from "./svg-components/logo.js";
 
 export default function Connect() {
   const [isActive, setIsActive] = useState(false);
@@ -72,12 +70,7 @@ export default function Connect() {
             </form>
           </div>
         </div>
-        <div className="matthewContainer">
-          <Link to="/">
-            <SvgMatthew />
-            <SvgMatthewCopy />
-          </Link>
-        </div>
+        <Logo />
         <div>
           <SvgBenson className="svg-benson" />
         </div>

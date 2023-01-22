@@ -91,6 +91,7 @@ body {
   transform: scale(30%);
   top: 7.5%;
   left: 0;
+  z-index: 5;
 }
 
 .firstName {
@@ -105,7 +106,7 @@ body {
   top: 0.1rem;
   width: 50vw;
   transform-origin: bottom;
-  animation: grow 1s ease-in-out;
+  animation: grow 1.5s ease-in-out;
   animation-fill-mode: forwards;
 }
 
