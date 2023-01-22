@@ -16,8 +16,8 @@ root.render(
         <CSSTransition classNames="fade" timeout={300}>
           <Routes>
             <Route path="/" element={<App />} />
-            <Route path="/WORK" element={<Work />} />
-            <Route path="/CONNECT" element={<Connect />} />
+            <Route path="/Work" element={<Work />} />
+            <Route path="/Connect" element={<Connect />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
