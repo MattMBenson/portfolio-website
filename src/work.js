@@ -6,6 +6,7 @@ import "./styles/work.css";
 export default function Work() {
   const cursorWrapperRef = useRef(null);
   const workContainerRef = useRef(null);
+  const footerRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [coords, setCoords] = useState({});
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
@@ -58,7 +59,7 @@ export default function Work() {
     if (isRunning) {
       intervalId = setInterval(() => {
         setSlideShowIndex((slideShowIndex + 1) % 3);
-        console.log(slideShowIndex);
+        //console.log(slideShowIndex);
         workContainerRef.current.style.backgroundImage =
           project0[slideShowIndex];
       }, 1000);
@@ -77,6 +78,18 @@ export default function Work() {
     console.log("resume slide show");
     workContainerRef.current.textContent = "";
   };
+
+  useEffect(() => {
+    const intervalId2 = setInterval(() => {
+      const footerX = footerRef.current.getBoundingClientRect().x;
+      if (footerX < window.innerWidth / 2) {
+        footerRef.current.style.color = "white";
+      } else {
+        footerRef.current.style.color = "black";
+      }
+    }, 500);
+    return () => clearInterval(intervalId2);
+  }, [footerRef]);
 
   return (
     <div
@@ -105,6 +118,16 @@ export default function Work() {
         style={{ top: mouseCoords.y - 24, left: mouseCoords.x - 30 }}
         ref={cursorWrapperRef}
       ></p>
+      <div className="footer">
+        <a
+          className="content"
+          href="https://github.com/MattMBenson"
+          ref={footerRef}
+          target="_blank"
+        >
+          what i'm working on...
+        </a>
+      </div>
     </div>
   );
 }
