@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "MaisonNeueBOLD";
+  src: url("../fonts/Maison\ Neue\ Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .light-side {
   width: 50vw;
   height: 100%;
@@ -24,7 +31,6 @@
   position: absolute;
   width: 25vw;
   height: 50vh;
-  background-image: url("https://picsum.photos/384/488");
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -45,6 +51,15 @@
 
 .work-container:hover {
   transform: translate(-50%, -50%) scale(1.05);
+  cursor: pointer;
+  background-color: rgba(139, 139, 139, 0.5) !important;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: MaisonNeueBOLD;
+  font-size: 30px;
+  text-align: center;
 }
 
 .cursor-wrapper {
@@ -54,7 +69,7 @@
   position: absolute;
   z-index: 100;
   pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 1s ease-in-out;
   transition: color 0.3s ease-in-out;
   transition: visibility 1s ease-in-out;
   opacity: 0%;
