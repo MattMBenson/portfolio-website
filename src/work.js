@@ -48,15 +48,14 @@ export default function Work() {
     cursorWrapperRef.current.style.opacity = "0";
   };
 
-  let project0 = [
-    "url('https://picsum.photos/200/300')",
-    "url('https://picsum.photos/201/300')",
-    "url('https://picsum.photos/202/300')",
-  ];
-
   useEffect(() => {
     let intervalId = null;
     if (isRunning) {
+      let project0 = [
+        "url('https://picsum.photos/200/300')",
+        "url('https://picsum.photos/201/300')",
+        "url('https://picsum.photos/202/300')",
+      ];
       intervalId = setInterval(() => {
         setSlideShowIndex((slideShowIndex + 1) % 3);
         //console.log(slideShowIndex);
@@ -124,6 +123,7 @@ export default function Work() {
           href="https://github.com/MattMBenson"
           ref={footerRef}
           target="_blank"
+          rel="noopener noreferrer"
         >
           what i'm working on...
         </a>
