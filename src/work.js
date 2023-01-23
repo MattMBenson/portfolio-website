@@ -12,6 +12,7 @@ export default function Work() {
   const [mouseCoords, setMouseCoords] = useState({ x: 0, y: 0 });
   const rootRef = useRef(null);
   const [slideShowIndex, setSlideShowIndex] = useState(0);
+  const [projectIndex, setProjectIndex] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
 
   useEffect(() => {
@@ -51,31 +52,64 @@ export default function Work() {
   useEffect(() => {
     let intervalId = null;
     if (isRunning) {
-      let project0 = [
-        "url('https://picsum.photos/200/300')",
-        "url('https://picsum.photos/201/300')",
-        "url('https://picsum.photos/202/300')",
+      let projects = [
+        [
+          "url('https://picsum.photos/200/300')",
+          "url('https://picsum.photos/201/300')",
+          "url('https://picsum.photos/202/300')",
+        ],
+        [
+          "url('https://picsum.photos/203/300')",
+          "url('https://picsum.photos/204/300')",
+          "url('https://picsum.photos/205/300')",
+        ],
+        [
+          "url('https://picsum.photos/206/300')",
+          "url('https://picsum.photos/207/300')",
+          "url('https://picsum.photos/208/300')",
+        ],
       ];
+
       intervalId = setInterval(() => {
         setSlideShowIndex((slideShowIndex + 1) % 3);
         //console.log(slideShowIndex);
         workContainerRef.current.style.backgroundImage =
-          project0[slideShowIndex];
+          projects[projectIndex][slideShowIndex];
       }, 1000);
     }
     return () => clearInterval(intervalId);
-  }, [isRunning, slideShowIndex, workContainerRef]);
+  }, [isRunning, slideShowIndex, workContainerRef, projectIndex]);
 
   const pauseSlideShow = () => {
     setIsRunning(false);
-    console.log("pause slide show");
-    workContainerRef.current.textContent = "PROJECT A";
+    //console.log("pause slide show");
+    if (projectIndex === 0) {
+      workContainerRef.current.textContent = "PROJECT A";
+    }
+    if (projectIndex === 1) {
+      workContainerRef.current.textContent = "PROJECT B";
+    }
+    if (projectIndex === 2) {
+      workContainerRef.current.textContent = "PROJECT C";
+    }
   };
 
   const resumeSlideShow = () => {
     setIsRunning(true);
-    console.log("resume slide show");
+    //console.log("resume slide show");
     workContainerRef.current.textContent = "";
+  };
+
+  const changeProject = () => {
+    if (cursorWrapperRef && cursorWrapperRef.current) {
+      if (cursorWrapperRef.current.textContent === "PREVIOUS") {
+        setProjectIndex(projectIndex - 1 < 0 ? 2 : projectIndex - 1);
+        console.log(projectIndex);
+      } else if (cursorWrapperRef.current.textContent === "NEXT") {
+        setProjectIndex(projectIndex + 1 > 2 ? 0 : projectIndex + 1);
+        console.log(projectIndex);
+      }
+    }
   };
 
   useEffect(() => {
@@ -106,6 +140,7 @@ export default function Work() {
       ></div>
       <div
         className="data-cursor-tracker-x"
+        onClick={changeProject}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       ></div>
