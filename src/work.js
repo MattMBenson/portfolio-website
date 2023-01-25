@@ -81,7 +81,7 @@ export default function Work() {
         //console.log(slideShowIndex);
         workContainerRef.current.style.backgroundImage =
           projects[projectIndex][slideShowIndex];
-      }, 250);
+      }, 500);
     }
     return () => clearInterval(intervalId);
   }, [isRunning, slideShowIndex, workContainerRef, projectIndex]);

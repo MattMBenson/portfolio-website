@@ -36,10 +36,12 @@
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease-in-out;
   z-index: 5;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
+
 .work-container-text {
   pointer-events: none;
   position: absolute;
