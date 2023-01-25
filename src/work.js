@@ -6,6 +6,8 @@ import "./styles/work.css";
 export default function Work() {
   const cursorWrapperRef = useRef(null);
   const workContainerRef = useRef(null);
+  const workContainerTitleRef = useRef(null);
+  const workContainerDescRef = useRef(null);
   const footerRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [coords, setCoords] = useState({});
@@ -54,9 +56,13 @@ export default function Work() {
     if (isRunning) {
       let projects = [
         [
-          "url('https://picsum.photos/200/300')",
-          "url('https://picsum.photos/201/300')",
-          "url('https://picsum.photos/202/300')",
+          "url('./images/project1/1.png')",
+          "url('./images/project1/2.png')",
+          "url('./images/project1/3.png')",
+          "url('./images/project1/4.png')",
+          "url('./images/project1/5.png')",
+          "url('./images/project1/6.png')",
+          "url('./images/project1/7.png')",
         ],
         [
           "url('https://picsum.photos/203/300')",
@@ -71,11 +77,11 @@ export default function Work() {
       ];
 
       intervalId = setInterval(() => {
-        setSlideShowIndex((slideShowIndex + 1) % 3);
+        setSlideShowIndex((slideShowIndex + 1) % projects[projectIndex].length);
         //console.log(slideShowIndex);
         workContainerRef.current.style.backgroundImage =
           projects[projectIndex][slideShowIndex];
-      }, 1000);
+      }, 250);
     }
     return () => clearInterval(intervalId);
   }, [isRunning, slideShowIndex, workContainerRef, projectIndex]);
@@ -84,20 +90,39 @@ export default function Work() {
     setIsRunning(false);
     //console.log("pause slide show");
     if (projectIndex === 0) {
-      workContainerRef.current.textContent = "PROJECT A";
+      workContainerTitleRef.current.textContent =
+        "MATHEMATICAL FRACTAL COMPUTATION";
+      workContainerDescRef.current.textContent =
+        "Cross-platform desktop application for visualizing and computing fractals. Built with Vanilla JS and Electron, and Node.js for the backend.";
     }
     if (projectIndex === 1) {
-      workContainerRef.current.textContent = "PROJECT B";
+      workContainerTitleRef.current.textContent = "PROJECT B";
     }
     if (projectIndex === 2) {
-      workContainerRef.current.textContent = "PROJECT C";
+      workContainerTitleRef.current.textContent = "PROJECT C";
     }
   };
 
   const resumeSlideShow = () => {
     setIsRunning(true);
     //console.log("resume slide show");
-    workContainerRef.current.textContent = "";
+    workContainerTitleRef.current.textContent = "";
+    workContainerDescRef.current.textContent = "";
+  };
+
+  const goToProject = () => {
+    if (projectIndex === 0) {
+      window.open(
+        "https://github.com/MattMBenson/Fractal-Computation",
+        "_blank"
+      );
+    }
+    if (projectIndex === 1) {
+      window.open("https://www.google.com", "_blank");
+    }
+    if (projectIndex === 2) {
+      window.open("https://www.google.com", "_blank");
+    }
   };
 
   const changeProject = () => {
@@ -130,13 +155,25 @@ export default function Work() {
       className={`fade-in ${isActive ? "fade-in-active" : ""}`}
     >
       <Logo />
-
+      <div className="work-container-text">
+        <div
+          className="work-container-title"
+          id="work-container-title-id"
+          ref={workContainerTitleRef}
+        ></div>
+        <div
+          className="work-container-desc"
+          id="work-container-desc-id"
+          ref={workContainerDescRef}
+        ></div>
+      </div>
       <div
         className="work-container"
         id="0"
         ref={workContainerRef}
         onMouseEnter={pauseSlideShow}
         onMouseLeave={resumeSlideShow}
+        onClick={goToProject}
       ></div>
       <div
         className="data-cursor-tracker-x"

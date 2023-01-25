@@ -36,13 +36,34 @@
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease-in-out;
   z-index: 5;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.work-container-text {
+  pointer-events: none;
+  position: absolute;
+  width: 25vw;
+  height: 50vh;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: MaisonNeueBOLD;
+  font-size: 30px;
+  text-align: center;
 }
 
 .data-cursor-tracker-x {
   position: absolute;
   top: 55%;
   left: 50%;
-  width: 50vw;
+  width: 75vw;
   height: 50vh;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -51,15 +72,16 @@
 
 .work-container:hover {
   transform: translate(-50%, -50%) scale(1.05);
-  cursor: pointer;
-  background-color: rgba(139, 139, 139, 0.5) !important;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: MaisonNeueBOLD;
-  font-size: 30px;
-  text-align: center;
+  cursor: url("../sprites/goToCursor.cur"), auto;
+  filter: blur(10px) brightness(70%) hue-rotate(180deg);
+}
+
+#work-container-title-id {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+#work-container-desc-id {
+  font-size: 0.8rem;
 }
 
 .cursor-wrapper {
