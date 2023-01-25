@@ -20,7 +20,7 @@ export default function Work() {
   useEffect(() => {
     setTimeout(() => {
       setIsActive(true);
-    }, 300);
+    }, 500);
   }, []);
 
   const handleMouseMove = (event) => {
