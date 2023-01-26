@@ -56,13 +56,15 @@ export default function Work() {
     if (isRunning) {
       let projects = [
         [
-          "url('./images/project1/1.png')",
-          "url('./images/project1/2.png')",
-          "url('./images/project1/3.png')",
-          "url('./images/project1/4.png')",
-          "url('./images/project1/5.png')",
           "url('./images/project1/6.png')",
+          "url('./images/project1/1.png')",
+          "url('./images/project1/5.png')",
+          "url('./images/project1/2.png')",
+          "url('./images/project1/8.png')",
+          "url('./images/project1/4.png')",
           "url('./images/project1/7.png')",
+          "url('./images/project1/3.png')",
+          
         ],
         [
           "url('https://picsum.photos/203/300')",
@@ -128,10 +130,19 @@ export default function Work() {
   const changeProject = () => {
     if (cursorWrapperRef && cursorWrapperRef.current) {
       if (cursorWrapperRef.current.textContent === "PREVIOUS") {
-        setProjectIndex(projectIndex - 1 < 0 ? 2 : projectIndex - 1);
+        if (projectIndex < 1) {
+          setProjectIndex(2);
+        } else {
+          setProjectIndex(projectIndex - 1);
+        }
+
         console.log(projectIndex);
       } else if (cursorWrapperRef.current.textContent === "NEXT") {
-        setProjectIndex(projectIndex + 1 > 2 ? 0 : projectIndex + 1);
+        if (projectIndex < 2) {
+          setProjectIndex(projectIndex + 1);
+        } else {
+          setProjectIndex(0);
+        }
         console.log(projectIndex);
       }
     }
