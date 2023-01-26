@@ -36,7 +36,9 @@
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease-in-out;
   z-index: 5;
-  background-color: white;
+  background-color: rgba(252, 252, 252, 0.95);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
@@ -75,7 +77,7 @@
 .work-container:hover {
   transform: translate(-50%, -50%) scale(1.05);
   cursor: url("../sprites/goToCursor.cur"), auto;
-  filter: blur(10px) brightness(70%) hue-rotate(180deg);
+  filter: blur(10px) brightness(70%);
 }
 
 #work-container-title-id {

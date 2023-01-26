@@ -64,7 +64,6 @@ export default function Work() {
           "url('./images/project1/4.png')",
           "url('./images/project1/7.png')",
           "url('./images/project1/3.png')",
-          
         ],
         [
           "url('https://picsum.photos/203/300')",
@@ -95,7 +94,7 @@ export default function Work() {
       workContainerTitleRef.current.textContent =
         "MATHEMATICAL FRACTAL COMPUTATION";
       workContainerDescRef.current.textContent =
-        "Cross-platform desktop application for visualizing and computing fractals. Built with Vanilla JS and Electron, and Node.js for the backend.";
+        "Cross-platform desktop application for visualizing and computing common fractals. Built with Electron using Node.js as the backend.";
     }
     if (projectIndex === 1) {
       workContainerTitleRef.current.textContent = "PROJECT B";
