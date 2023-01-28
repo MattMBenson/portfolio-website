@@ -66,9 +66,18 @@ export default function Work() {
           "url('./images/project1/3.png')",
         ],
         [
-          "url('https://picsum.photos/203/300')",
-          "url('https://picsum.photos/204/300')",
-          "url('https://picsum.photos/205/300')",
+          "url('./images/project2/1.png')",
+          "url('./images/project2/2.png')",
+          "url('./images/project2/3.png')",
+          "url('./images/project2/4.png')",
+          "url('./images/project2/5.png')",
+          "url('./images/project2/6.png')",
+          "url('./images/project2/7.png')",
+          "url('./images/project2/8.png')",
+          "url('./images/project2/9.png')",
+          "url('./images/project2/10.png')",
+          "url('./images/project2/11.png')",
+          "url('./images/project2/12.png')",
         ],
         [
           "url('https://picsum.photos/206/300')",
@@ -97,7 +106,9 @@ export default function Work() {
         "Cross-platform desktop application for visualizing and computing common fractals. Built with Electron using Node.js as the backend.";
     }
     if (projectIndex === 1) {
-      workContainerTitleRef.current.textContent = "PROJECT B";
+      workContainerTitleRef.current.textContent = "PARITY BIT GENERATOR";
+      workContainerDescRef.current.textContent =
+        "Implemented a standard feed forward neural network and the backpropagation training algorithm from scratch. Built with Python and NumPy.";
     }
     if (projectIndex === 2) {
       workContainerTitleRef.current.textContent = "PROJECT C";
@@ -119,7 +130,10 @@ export default function Work() {
       );
     }
     if (projectIndex === 1) {
-      window.open("https://www.google.com", "_blank");
+      window.open(
+        "https://github.com/MattMBenson/ParityBitPrediction",
+        "_blank"
+      );
     }
     if (projectIndex === 2) {
       window.open("https://www.google.com", "_blank");
@@ -152,8 +166,10 @@ export default function Work() {
       const footerX = footerRef.current.getBoundingClientRect().x;
       if (footerX < window.innerWidth / 2) {
         footerRef.current.style.color = "white";
+        footerRef.current.style.borderTop = "1px solid white";
       } else {
         footerRef.current.style.color = "black";
+        footerRef.current.style.borderTop = "1px solid black";
       }
     }, 500);
     return () => clearInterval(intervalId2);
